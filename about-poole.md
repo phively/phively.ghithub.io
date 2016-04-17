@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Poole
+breadcrumb: About-Poole
 ---
 
 This site is built using Jekyll, and the styles are forked from Mark Otto's Poole and Hyde themes. Here's his description as of April 17, 2016:
