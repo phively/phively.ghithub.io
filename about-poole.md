@@ -3,7 +3,7 @@ layout: page
 title: About Poole
 ---
 
-This site is based upon Mark Otto's Hyde layout. Here's his description as of April 17, 2016:
+This site is built using Jekyll, and the styles are forked from Mark Otto's Poole and Hyde themes. Here's his description as of April 17, 2016:
 
 In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
 
