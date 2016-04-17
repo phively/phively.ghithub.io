@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
 <header class="site-header">
 
   <div class="wrapper">
@@ -8,7 +5,7 @@
 	<!--Breadcrumbs, see https://comsysto.com/blog-post/automatic-breadcrumb-for-jekyll-on-github-pages-->
 	
 	<ol class="breadcrumb">
-	<li><a href="{{ site.baseurl }}/">Home</a></li>
+	<li><a href="{{ site.baseurl }}">Home</a></li>
 	{% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
 	{% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
 	{% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:1 }}{% endcapture %}
@@ -31,5 +28,3 @@
   </div>
 
 </header>
-
-</html>
