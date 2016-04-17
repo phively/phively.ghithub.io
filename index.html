@@ -1,42 +1,37 @@
-<!DOCTYPE html>
-<!--Save the below code-->
-<html>
-<head>
-	<meta charset='UTF-8'>
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-	<link rel="icon" type="image/png" href="favicon.ico">
-	<title>Paul on GitHub</title>
-</head>
+---
+layout: default
+title: Home
+---
 
-<body>
-<div id="container">
-<div class="inner">
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-<header>
-	<h1>Paul on GitHub</h1>
-</header>
-<section id="downloads" class="clearfix">
-	<a href="https://github.com/phively/" id="view-on-github" class="button"><span>View on GitHub</span></a>
-</section>
-<hr>
-<!--Save the above code-->
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-<section id="main_content">
-	<h1><a id="projects" class="anchor" href="#projects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Projects</h1>
-	<p><a href="http://phively.github.io/gsb-sols-proj/">Booth Solicitations</a></p>
-	<p><a href="https://github.com/phively/vba-the-one-macro">Excel Macros</a></p>
-	<p><a href="http://phively.github.io/demo-R-iris/">Learning RMarkdown</a></p>
-</section>
-
-<footer>
-	Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-</footer>
-
+    {{ post.content }}
+  </div>
+  {% endfor %}
 </div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
-</body>
-</html>
