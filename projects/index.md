@@ -5,11 +5,11 @@ title: Projects
 
 ## Booth
 
-* [Booth Solicitations Project](gsb-sols-proj/)
+* [Booth Solicitations Project](http://phively.github.io/gsb-sols-proj/)
 
 ## Statistics
 
-* [Learning RMarkdown](demo-R-iris/) with the Iris dataset
+* [Learning RMarkdown](http://phively.github.io/demo-R-iris/) with the Iris dataset
 
 ## Tools
 
