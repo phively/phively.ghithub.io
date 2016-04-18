@@ -45,22 +45,6 @@ html {
   }
 }
 
-/* Header */
-
-#header {
-  position: relative;
-  border: 1px solid black;
-}
-
-#breadcrumbs {
-  bottom: 5px;
-  right: 5px;
-  padding: 7px;
-  font-family: "Source Code Pro", monospace;
-  font-size: 15px;
-  min-width: 180px;
-  max-width: 100%;
-}
 
 /*
  * Sidebar
