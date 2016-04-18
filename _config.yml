@@ -8,11 +8,11 @@ permalink:        pretty
 # Setup
 title:            Paul on GitHub
 tagline:          'Fun With Data'
-baseurl:          
+baseurl:          /
 
 author:
   name:           'Paul Hively'
-  url:            http://phively.github.io/
+  url:            http://phively.github.io
 
 paginate:         5
 
