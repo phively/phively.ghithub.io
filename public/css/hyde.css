@@ -45,6 +45,40 @@ html {
   }
 }
 
+/* Header */
+
+.breadcrumb {
+  float:left;
+  padding-top:16px;
+  list-style: none;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+}
+
+.breadcrumb { border: 0px;  display: block;}
+.breadcrumb li {font-size: 14px;}
+.breadcrumb a {color: $brand-color;}
+.breadcrumb a:hover {color: darken($brand-color, 20%);}
+.breadcrumb>.active a {color: #555555; }
+.breadcrumb>li+li:before {color:$brand-color; content: "\003E\00a0";}
+
+
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
 
 /*
  * Sidebar
