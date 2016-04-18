@@ -1,32 +1,30 @@
-<header class="site-header">
-
-  <div class="wrapper">
-
-	<!--Breadcrumbs, see https://comsysto.com/blog-post/automatic-breadcrumb-for-jekyll-on-github-pages-->
-	
-	<ol class="breadcrumb">
-	    <li><a href="{{ site.baseurl }}">Home</a></li>
-	    {% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
-	    {% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
-	    {% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:1 }}{% endcapture %}
-	    {% for i in (1..forLoopMaxInt) %}
-	        {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/index.html{% endcapture %}
-	        {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
-	        {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
-	        {% for breadcrumb_page in site.pages %}
-	
-	            {% if current_breadcrumb_url == breadcrumb_page.url or
-	                  current_breadcrumb_md_url == breadcrumb_page.url %}
-	                {% capture breadcrumb_page_page_url_without_index_html %}{{ breadcrumb_page.url | remove: "index.html" }}{% endcapture %}
-	                    {% assign j = forLoopMaxInt | plus: 0 %}
-	                    <li {% if i == j %}class="active"{% endif %}>
-	                    <a href="{{ site.baseurl }}{{breadcrumb_page_page_url_without_index_html}}">{{breadcrumb_page.breadcrumb}}</a>
-	                </li>
-	            {% endif %}
-	        {% endfor %}
-	    {% endfor %}
-	</ol>
-
+<div id="wrapper">
+  <div id="header" class="headfoot">
+    <a href="/" id="head-link"></a>
+    <div id="info-box">
+      <h1 id="blog-title"><a href="/">Is this on?</a></h1>
+    </div>
+    <!-- Breadcrumbs: -->
+    {% unless page.no_breadcrumbs %}
+      <div id="breadcrumbs" class="no-print">
+        {% capture url_parts %}{{ page.url | replace:'/'," " }}{% endcapture %}
+        {% capture maybe_index_html %}{{ page.url | split: '/' | last }}{% endcapture %}
+        {% if page.breadcrumb_limit %}
+          {% assign num_parts = page.breadcrumb_limit %}
+        {% else %}
+          {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
+        {% endif %}
+        {% assign previous="" %}
+        <span title="print working directory">pwd</span>
+        /<!-- Comment to ensure there's no whitespace between the parts of this "path"
+        {% for unused in (1..num_parts) %}
+          {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+          {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
+          --><a href="{{previous}}">{{ first_word }}</a><!--
+        -->{% unless forloop.last %}/{% endunless %}<!--
+          {% capture url_parts %}{{ url_parts |remove_first:first_word }}{% endcapture %}
+        {% endfor %}
+        -->
+      </div>
+    {% endunless %}
   </div>
-
-</header>
