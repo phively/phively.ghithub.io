@@ -1,5 +1,4 @@
 # Dependencies
-markdown:	redcarpet
 highlighter:	rouge
 
 # Permalinks
@@ -11,13 +10,13 @@ tagline:	'Fun With Data'
 baseurl:	/
 
 author:
-name:		'Paul Hively'
-url:		//phively.github.io
+ name:		'Paul Hively'
+ url:		//phively.github.io
 
 paginate:	5
 
 # Custom vars
 version:	0.2.0
 
-github:		//github.com/phively/
-repo:		//github.com/phively/phively.github.io
+github:
+ repo:		//github.com/phively/
