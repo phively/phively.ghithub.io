@@ -1,23 +1,23 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      rouge
+markdown:	redcarpet
+highlighter:	rouge
 
 # Permalinks
-permalink:        pretty
+permalink:	pretty
 
 # Setup
-title:            Paul on GitHub
-tagline:          'Fun With Data'
-baseurl:          /
+title:		Paul on GitHub
+tagline:	'Fun With Data'
+baseurl:	/
 
 author:
-  name:           'Paul Hively'
-  url:            http://phively.github.io
+name:		'Paul Hively'
+url:		//phively.github.io
 
-paginate:         5
+paginate:	5
 
 # Custom vars
-version:          0.2.0
+version:	0.2.0
 
-github:
-  repo:           https://github.com/phively/
+github:		//github.com/phively/
+repo:		//github.com/phively/phively.github.io
