@@ -1,5 +1,6 @@
 # Dependencies
 highlighter:	rouge
+encoding:	UTF-8
 
 # Permalinks
 permalink:	pretty
