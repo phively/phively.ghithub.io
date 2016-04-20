@@ -4,5 +4,5 @@ title: Projects
 ---
 
 {% for category in site.categories %}
-  * {{ category | first }}"{% unless forloop.last %},{% endunless %}
+  * {{ category | first }} &raquo; [ {{ post.title }} ]({{ post.url }})
 {% endfor %}
