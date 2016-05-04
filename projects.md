@@ -6,11 +6,7 @@ title: Projects
 {% for category in site.categories %}
 {% capture cat %}{{ category | first }}{% endcapture %}
 
-{% if cat == "projects" %}
-
-	{% break %}
-
-{% else %}
+{% if cat != "projects" %}
 
 	### {{ cat | camelcase }}
 	{% for post in site.categories[cat] %}
