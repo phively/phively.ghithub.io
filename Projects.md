@@ -7,7 +7,7 @@ title: Projects
 	{% capture cat %}{{ category | first }}{% endcapture %}
 
 	{{ cat | capitalize }}
-		{% for post in site.categories[cat] %}
-		  * {{ post.date | date: "%B %d, %Y" }} &raquo; [ {{ post.title }} ]({{ post.url }})
-		{% endfor %}
+	* {% for post in site.categories[cat] %}
+		{{ post.date | date: "%B %d, %Y" }} &raquo; [ {{ post.title }} ]({{ post.url }})
+	{% endfor %}
 {% endfor %}
