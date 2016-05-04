@@ -22,24 +22,17 @@ permalink: /tags/
 
 </section>
 
-<hr>
-
-    {% for tag in site.tags  %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</h2>
-    
-    <ul>
-        {% assign pages_list = tag[1] %}
-        {% for post in pages_list reversed %}
-        {% if post.title != null %}
-        {% if group == null or group == post.group %}
-        <li>
-		<p><a href="{{ site.url }}{{ post.url | prepend: site.baseurl }}">
-			{{ post.title }}</a><span class="date"><time datetime="{{ post.date | date_to_long_string }}"> - {{ post.date | date_to_long_string }}</time></span></p>
-        </li>
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% assign pages_list = nil %}
-        {% assign group = nil %}
-    </ul>
-    {% endfor %}
+{% for tag in site.tags  %}
+	{{ tag[0] | slugify }} > {{ tag[0] | capitalize }}
+	
+	{% assign pages_list = tag[1] %}
+	{% for post in pages_list reversed %}
+	{% if post.title != null %}
+	{% if group == null or group == post.group %}
+		* {{ post.date | date: "%B %d, %Y" }} &raquo; [{{ post.title }}]({{ site.url }}{{ post.url | prepend: site.baseurl }})
+	{% endif %}
+	{% endif %}
+	{% endfor %}
+	{% assign pages_list = nil %}
+	{% assign group = nil %}
+{% endfor %}
