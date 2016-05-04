@@ -8,13 +8,7 @@ permalink: /category/
 {% capture cat %}{{ category | first }}{% endcapture %}
 
 <h2>{{ cat | capitalize }}</h2>
-	<ul>
 	{% for post in site.categories[cat] %}
-	  <li>
-	  <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-	     <span class="date"> - {{ post.date | date_to_long_string }}</span></p>
-	  </li>
+	  * {{ post.date | date: "%B %d, %Y" }} &raquo; [{{ post.title }}]({{ post.url | prepend: site.baseurl }})
 	{% endfor %}
-	</ul>
-
 {% endfor %}
