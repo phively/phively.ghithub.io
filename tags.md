@@ -14,7 +14,7 @@ permalink: /tags/
     {% endfor %}
     {% else %}
     {% for tag in tags_list %}
-    <a class="post-tags-item" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+    <a class="post-tags-item" href="#{{ tag[0] | slugify }}"</a>
     {% endfor %}
     {% endif %}
     
