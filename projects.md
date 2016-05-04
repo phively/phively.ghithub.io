@@ -8,10 +8,10 @@ title: Projects
 
 {% if cat != "projects" %}
 
-	### {{ cat | camelcase }}
-	{% for post in site.categories[cat] %}
-	  * {{ post.date | date: "%B %d, %Y" }} &raquo; [ {{ post.title }} ]({{ post.url }})
-	{% endfor %}
+### {{ cat | camelcase }}
+{% for post in site.categories[cat] %}
+  * {{ post.date | date: "%B %d, %Y" }} &raquo; [ {{ post.title }} ]({{ post.url }})
+{% endfor %}
 
 {% endif %}
 
