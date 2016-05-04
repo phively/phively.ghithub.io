@@ -7,7 +7,7 @@ title: Projects
 {% capture cat %}{{ category | first }}{% endcapture %}
 
 {% if cat == "projects" %}
-  {% break %}
+  {% continue %}
 {% endif %}
 
 ### {{ cat | camelcase }}
