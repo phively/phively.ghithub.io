@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Category
-subtitle: Do something you like.
-permalink: /category/
+title: Projects
+permalink: /projects/
 ---
 
 {% for category in site.categories %}
@@ -12,8 +11,7 @@ permalink: /category/
 	<ul>
 	{% for post in site.categories[cat] %}
 	  <li>
-	  <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-	     <span class="date"> - {{ post.date | date_to_long_string }}</span></p>
+	  <p><span class="date">{{ post.date | date: "%B %d, %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></p>
 	  </li>
 	{% endfor %}
 	</ul>
