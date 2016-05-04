@@ -2,6 +2,12 @@
 layout: default
 ---
 
-{% for category in site.categories %}
-  * {{ category | first }} &raquo; [ {{ post.title }} ]({{ post.url }})
+<h1>{{ page.category }}</h1>
+
+<ul>
+{% for post in site.category[page.category] %}
+  <li>
+    {{ post.date | date: "%B %d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
 {% endfor %}
+</ul>
