@@ -22,7 +22,7 @@ description: "An archive of posts sorted by tag"
   <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
   <ul class="posts">
     {% for post in site.tags[this_word] %}{% if post.title != null %}
-    <li itemscope><a href="{{ post.url }}">{{ post.title }}</a> – <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%F" }}</time></span></li>
+    <li itemscope><a href="{{ post.url }}">{{ post.title }}</a> &ndash; <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%F" }}</time></span></li>
     {% endif %}{% endfor %}
   </ul>
   {% endunless %}{% endfor %}

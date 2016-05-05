@@ -26,7 +26,7 @@ title: Categories
   <ul class="posts">
     {% for post in site.categories[this_word] %}
     {% if post.title != null %}
-    <li itemscope><a href="{{ post.url }}">{{ post.title }}</a> – <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%F" }}</time></span></li>
+    <li itemscope><a href="{{ post.url }}">{{ post.title }}</a> &ndash; <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%F" }}</time></span></li>
     {% endif %}{% endfor %}
   </ul>
   {% endunless %}{% endfor %}
