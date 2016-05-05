@@ -10,7 +10,7 @@ title: Tags
 {% if tags_list.first[0] == null %}
 
 {% for tag in tags_list %}
-[{{ tag }} ({{site.tags.size}})](#{{ tag | slugify }}) 
+[{{ tag }} ({{ tag | size }})](#{{ tag | slugify }}) 
 {% endfor %}
 {% else %}
 {% for tag in tags_list %}
@@ -19,15 +19,13 @@ title: Tags
 
 {% endif %}
 
-{% assign tags_list = nil %}
-
 {% endcapture %}
 
 {{ taglist | strip_newlines }}
 
 ------
 
-{% for tag in site.tags | sort %}
+{% for tag in tags_list %}
 #### <a name="{{ tag[0] | slugify }}">{{ tag[0] }}</a>
 
 {% assign pages_list = tag[1] %}
@@ -42,3 +40,5 @@ title: Tags
 {% assign group = nil %}
 
 {% endfor %}
+
+{% assign tags_list = nil %}
