@@ -12,18 +12,19 @@ title: Categories
 
 <div id="categories">
   {% for cat in cat_words) %}
+    <!-- Do not include a category for "projects" only its subfolders -->
     {% if cat == "projects" %} {% continue %} {% endif %}
     <a href="#{{ cat | cgi_escape }}">{{ cat }}<sup>{{ site.categories[cat] | size }}</sup></a>
   {% endfor %}
 
 
   {% for item in (0..site.categories.size) %}{% unless forloop.last %}
-    {% if cat == "projects" %} {% continue %} {% endif %}
     {% capture this_word %}{{ cat_words[item] | strip_newlines }}{% endcapture %}
+    <!-- Do not include a category for "projects" only its subfolders -->
+    {% if this_word == "projects" %} {% continue %} {% endif %}
   <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
   <ul class="posts">
     {% for post in site.categories[this_word] %}
-    {% if cat == "projects" %} {% continue %} {% endif %}
     {% if post.title != null %}
     <li itemscope><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}{% endfor %}
