@@ -5,7 +5,7 @@ title: Tags
 
 {% capture taglist %}
 
-{% assign tags_list = site.tags | sort:"value" %}
+{% assign tags_list = site.tags | sort %}
 
 {% if tags_list.first[0] == null %}
 
