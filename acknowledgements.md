@@ -31,9 +31,13 @@ The site's layout, styles, and navigation pane were forked from Mark Otto's Pool
 > 
 > Thanks for reading!
 
-## Michael Lanyon's blog
+## Other GitHub Pages blogs
 
 Michael Lanyon's blog has [a great tutorial](https://blog.lanyonm.org/articles/2013/11/21/alphabetize-jekyll-page-tags-pure-liquid.html) on GitHub-Pages-friendly Liquid scripting. I used these ideas extensively throughout.
+
+The [Nice Blog](http://benjaminblog.ml/Nice_Blog/) layout has some good minimalist ideas and elegant coding.
+
+I didn't use [Jekyll Now](http://www.jekyllnow.com/) to initialize my blog, but I do really like their icons! These appear at the bottom of the nav bar.
 
 ## LaTeX
 

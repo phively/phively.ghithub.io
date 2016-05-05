@@ -15,6 +15,11 @@ author:
  name:		'Paul Hively'
  url:		//phively.github.io
 
+footer-links:
+ email:		pbhively@gmail.com
+ linkedin:	paulhively
+ github:	phively
+
 paginate:	5
 
 # Custom vars
