@@ -3,9 +3,8 @@ layout: page
 title: Tags
 ---
 
+{% capture taglist %}
 {% assign tags_list = site.tags %}
-
-<span class="nowrap">
 
 {% if tags_list.first[0] == null %}
 
@@ -19,9 +18,10 @@ title: Tags
 
 {% endif %}
 
-</span>
-
 {% assign tags_list = nil %}
+{% endcapture %}
+
+{{ taglist | strip_newlines }}
 
 ------
 
