@@ -8,11 +8,11 @@ title: Tags
 {% if tags_list.first[0] == null %}
 
 {% for tag in tags_list %}
-  * [ {{ tag }} ]({{ tag | slugify }})
+  * [ {{ tag }} ](#{{ tag | slugify }})
 {% endfor %}
 {% else %}
 {% for tag in tags_list %}
-  [ {{ tag[0] }} ]({{ tag[0] | slugify }})
+  * [ {{ tag[0] }} ](#{{ tag[0] | slugify }})
 {% endfor %}
 
 {% endif %}
@@ -20,7 +20,7 @@ title: Tags
     {% assign tags_list = nil %}
 
 {% for tag in site.tags  %}
-  <a name={{ tag[0] | slugify }}>{{ tag[0] | capitalize }}</a>
+ <a name="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</a>
 
 {% assign pages_list = tag[1] %}
 {% for post in pages_list reversed %}
