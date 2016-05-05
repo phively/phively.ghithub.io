@@ -5,22 +5,28 @@ title: Tags
 
 {% assign tags_list = site.tags %}
 
+<span class="nowrap">
+
 {% if tags_list.first[0] == null %}
 
 {% for tag in tags_list %}
-<span class="nowrap">[ {{ tag }} ](#{{ tag | slugify }})</span>
+[ {{ tag }} ](#{{ tag | slugify }})
 {% endfor %}
 {% else %}
 {% for tag in tags_list %}
-<span class="nowrap">[ {{ tag[0] }} ](#{{ tag[0] | slugify }})</span>
+[ {{ tag[0] }} ](#{{ tag[0] | slugify }})
 {% endfor %}
 
 {% endif %}
-    
-    {% assign tags_list = nil %}
+
+</span>
+
+{% assign tags_list = nil %}
+
+------
 
 {% for tag in site.tags  %}
- <a name="{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+#### <a name="{{ tag[0] | slugify }}">{{ tag[0] }}</a>
 
 {% assign pages_list = tag[1] %}
 {% for post in pages_list reversed %}
