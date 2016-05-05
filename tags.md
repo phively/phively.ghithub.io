@@ -9,11 +9,11 @@ title: Tags
 	{% if tags_list.first[0] == null %}
 	
 	{% for tag in tags_list %}
-	[ {{ tag }} ](#{{ tag | slugify }})
+	[ {{ tag }} ](#{{ tag | slugify }});
 	{% endfor %}
 	{% else %}
 	{% for tag in tags_list %}
-	[ {{ tag[0] }} ](#{{ tag[0] | slugify }}) 
+	[ {{ tag[0] }} ](#{{ tag[0] | slugify }});
 	{% endfor %}
 	
 	{% endif %}
