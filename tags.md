@@ -20,7 +20,7 @@ title: Tags
     {% assign tags_list = nil %}
 
 {% for tag in site.tags  %}
-  <a name="#{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</a>
+  <a name={{ tag[0] | slugify }}>{{ tag[0] | capitalize }}</a>
 
 {% assign pages_list = tag[1] %}
 {% for post in pages_list reversed %}
