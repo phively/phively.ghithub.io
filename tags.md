@@ -32,7 +32,7 @@ title: Tags
 {% for post in pages_list reversed %}
 {% if post.title != null %}
 {% if group == null or group == post.group %}
-  * {{ post.date | date: "%B %d, %Y" }} &raquo; [{{ post.title }}]({{ site.url }}{{ post.url | prepend: site.baseurl }})
+  * {{ post.date | date: "%B %d, %Y" }} &raquo; [{{ post.title }}]({{ post.url }})
 {% endif %}
 {% endif %}
 {% endfor %}
