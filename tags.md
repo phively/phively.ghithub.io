@@ -10,7 +10,7 @@ title: Tags
 {% if tags_list.first[0] == null %}
 
 {% for tag in tags_list %}
-[{{ tag }}<sup>{{tag.size}}</sup>](#{{ tag | slugify }}) 
+[{{ tag }}<sup>{{site.tags[tag].size}}</sup>](#{{ tag | slugify }}) 
 {% endfor %}
 {% else %}
 {% for tag in tags_list %}
