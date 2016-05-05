@@ -4,7 +4,8 @@ title: Tags
 ---
 
 {% capture taglist %}
-{% assign tags_list = site.tags %}
+
+{% assign tags_list = site.tags | sort:"value" %}
 
 {% if tags_list.first[0] == null %}
 
@@ -19,6 +20,7 @@ title: Tags
 {% endif %}
 
 {% assign tags_list = nil %}
+
 {% endcapture %}
 
 {{ taglist | strip_newlines }}
