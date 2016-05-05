@@ -4,21 +4,21 @@ title: Tags
 ---
 
 {% capture taglist %}
-{% assign tags_list = site.tags %}
-
-{% if tags_list.first[0] == null %}
-
-{% for tag in tags_list %}
-[ {{ tag }} ](#{{ tag | slugify }})
-{% endfor %}
-{% else %}
-{% for tag in tags_list %}
-[ {{ tag[0] }} ](#{{ tag[0] | slugify }})
-{% endfor %}
-
-{% endif %}
-
-{% assign tags_list = nil %}
+	{% assign tags_list = site.tags %}
+	
+	{% if tags_list.first[0] == null %}
+	
+	{% for tag in tags_list %}
+	[ {{ tag }} ](#{{ tag | slugify }})
+	{% endfor %}
+	{% else %}
+	{% for tag in tags_list %}
+	[ {{ tag[0] }} ](#{{ tag[0] | slugify }}) 
+	{% endfor %}
+	
+	{% endif %}
+	
+	{% assign tags_list = nil %}
 {% endcapture %}
 
 {{ taglist | strip_newlines }}
