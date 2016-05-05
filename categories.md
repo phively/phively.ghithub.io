@@ -12,11 +12,13 @@ title: Categories
 
 <div id="categories">
   {% for cat in cat_words) %}
+    {% if cat == "projects" %} {% continue %} {% endif %}
     <a href="#{{ cat | cgi_escape }}">{{ cat }}<sup>{{ site.categories[cat] | size }}</sup></a>
   {% endfor %}
 
 
   {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+    {% if cat == "projects" %} {% continue %} {% endif %}
     {% capture this_word %}{{ cat_words[item] | strip_newlines }}{% endcapture %}
   <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
   <ul class="posts">
