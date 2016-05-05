@@ -3,16 +3,26 @@ layout: navpage
 title: Categories
 ---
 
-{% for category in site.categories %}
-{% capture cat %}{{ category | first }}{% endcapture %}
+<!-- Adapted from https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html -->
 
-{% if cat == "projects" %}
-  {% continue %}
-{% endif %}
+{% capture site_cats %}{% for cat in site.categories %}{{ cat | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+<!-- site_cats: {{ site_cats }} -->
+{% assign cat_words = site_cats | split:',' | sort %}
+<!-- cat_words: {{ cat_words }} -->
 
-### {{ cat | camelcase }}
-{% for post in site.categories[cat] %}
-  * {{ post.date | date: "%B %d, %Y" }} &raquo; [ {{ post.title }} ]({{ post.url }})
-{% endfor %}
+<div id="categories">
+  {% for cat in cat_words) %}
+    <a href="#{{ cat | cgi_escape }}">{{ cat }}<sup>{{ site.categories[cat] | size }}</sup></a>
+  {% endfor %}
 
-{% endfor %}
+
+  {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ cat_words[item] | strip_newlines }}{% endcapture %}
+  <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
+  <ul class="posts">
+    {% for post in site.categories[this_word] %}{% if post.title != null %}
+    <li itemscope><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}{% endfor %}
+  </ul>
+  {% endunless %}{% endfor %}
+</div>
