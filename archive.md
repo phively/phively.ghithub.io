@@ -12,7 +12,7 @@ title: Archive
     {{ post.date | date: "%Y" }}
   {% endcapture %}
   {% if is_first %}
-## {{ this_year }}
+<h2>{{ this_year }}</h2>
   {% endif %}
 
   {% capture next_year %}
