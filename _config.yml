@@ -1,7 +1,7 @@
 # Dependencies
 highlighter:	rouge
 encoding:	UTF-8
-markdown: kramdown
+markdown:	kramdown
 
 # Permalinks
 permalink:	pretty
@@ -23,7 +23,7 @@ footer-links:
 paginate:	5
 
 # Custom vars
-version:	0.3.0
+version:	0.4.0
 
 github:
  repo:		//github.com/phively/
