@@ -24,9 +24,6 @@ title: Archive
     {% assign is_first = true %}
   {% endif %}
 
-<ul>
-	<li><a href="{{ post.url }}">{{ post.title }}</a> &ndash; {{ post.date | date: "%F" }}
-	</li>
-</ul>
+  * <a href="{{ post.url }}">{{ post.title }}</a> &ndash; {{ post.date | date: "%F" }}
 	  
 {% endfor %}
