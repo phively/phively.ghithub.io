@@ -1,29 +1,29 @@
 # Dependencies
-highlighter:	rouge
-encoding:	UTF-8
-markdown:	kramdown
+encoding:           UTF-8
+markdown:           kramdown
+highlighter:        rouge
 
 # Permalinks
-permalink:	pretty
+permalink:          pretty
 
 # Setup
-title:		Paul on GitHub
-tagline:	'Fun With Data'
-baseurl:	/
+title:              Paul on GitHub
+tagline:            'Fun With Data'
+baseurl:            /
 
 author:
- name:		'Paul Hively'
- url:		//phively.github.io
+ name:              'Paul Hively'
+ url:               //phively.github.io
 
-footer-links:
- email:		pbhively@gmail.com
- linkedin:	paulhively
- github:	phively
-
-paginate:	5
+paginate:           5
 
 # Custom vars
-version:	0.4.0
+version:            0.4.0
 
 github:
- repo:		//github.com/phively/
+ repo:              //github.com/phively/
+
+footer-links:
+ email:             pbhively@gmail.com
+ linkedin:          paulhively
+ github:            phively
