@@ -45,6 +45,16 @@ html {
   }
 }
 
+/* MathJax */
+
+body div.content .has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #333;
+}
+
 /*
  * Sidebar
  *
