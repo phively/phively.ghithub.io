@@ -41,3 +41,4 @@ I didn't use [Jekyll Now](http://www.jekyllnow.com/) to initialize my blog, but 
 
 ## LaTeX
 
+I implemented LaTeX rendering using MathJax as described [here](http://haixing-hu.github.io/programming/2013/09/20/how-to-use-mathjax-in-jekyll-generated-github-pages/) by Haixing Hu. There was some messiness with inline equations but after tweaking the code he provided it works great.
