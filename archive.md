@@ -12,7 +12,7 @@ title: Archive
     {{ post.date | date: "%Y" }}
   {% endcapture %}
   {% if is_first %}
-  ## {{ this_year }}
+## {{ this_year }}
   {% endif %}
 
   {% capture next_year %}
@@ -24,6 +24,6 @@ title: Archive
     {% assign is_first = true %}
   {% endif %}
 
-  * <a href="{{ post.url }}">{{ post.title }}</a> &ndash; {{ post.date | date: "%F" }}
+* [{{ post.title }}]({{ post.url }}) &ndash; {{ post.date | date: "%F" }}
 	  
 {% endfor %}
