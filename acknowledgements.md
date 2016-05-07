@@ -2,7 +2,7 @@
 layout: page
 title: Acknowledgements
 ---
-<div id="."></div>
+
 This site is built using Jekyll, and makes liberal use of several different code bases. Here are the most significant.
 
 ## About Poole
