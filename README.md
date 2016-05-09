@@ -1,5 +1,3 @@
-To do list
-
 Built on Poole. Some nice references and ideas:
 
 [http://getpoole.com/](http://getpoole.com/)
@@ -11,33 +9,44 @@ Built on Poole. Some nice references and ideas:
 ## History
 
 v0.4
-* Layouts improvements
-* Sidebar revamp
-* LaTeX support
+- [x] Layouts improvements
+- [x] Sidebar revamp
+- [x] LaTeX support
 
 v0.3
-* Working tags, categories
-* Improved archive
+- [x] Working tags, categories
+- [x] Improved archive
 
 v0.2
-* CSS customization
-* US localization
-* Blog archive
+- [x] CSS customization
+- [x] US localization
+- [x] Blog archive
 
 v0.1
-* Site initialized!
+- [x] Site initialized!
 
 ## Pending
 
 v0.5
-* Mobile-friendly navigation
-
-* Posts layout revamp
-* CSS updates
+- [ ] Mobile-friendly navigation
+- [ ] Posts descriptions
+- [ ] CSS updates
 
 ## To-do
 
-* Posts descriptions
-* Project pages
-* Analytics
-* Comments?
+v0.6
+- [ ] Project pages
+- [ ] Landing page
+
+v0.7
+- [ ] Posts layout revamp
+- [ ] Improve posts navigation
+
+v0.8
+- [ ] Analytics
+
+v0.9
+- [ ] Comments
+
+v1.0
+* Others?
