@@ -78,13 +78,6 @@ html {
   color: #fff;
 }
 
-/* Horizontal links on mobile, vertical otherwise */
-@media (max-width: 48em) {
-  .sidebar li{
-    float: left;
-  }
-}
-
 /* About section */
 .sidebar-about h1 {
   color: #fff;
@@ -96,6 +89,14 @@ html {
 .sidebar-nav {
   margin-top: 1rem;
 }
+
+/* Horizontal links on mobile, vertical otherwise */
+@media (max-width: 48em) {
+  .sidebar-nav li{
+    float: left;
+  }
+}
+
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
