@@ -70,7 +70,7 @@ html {
   overflow: hidden;
 }
 
-/* Horizontal links on mobile, vertical otherwise */    
+/* Horizontal links on mobile, vertical otherwise    
 @media (min-width: 0em) {
   .sidebar ul {
     padding: 2;
@@ -78,7 +78,7 @@ html {
   .sidebar li {
     float: none;
   }
-}
+} */
 
 @media (min-width: 48em) {
   .sidebar {
