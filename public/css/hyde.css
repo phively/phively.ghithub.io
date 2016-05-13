@@ -58,6 +58,16 @@ html {
   color: rgba(255,255,255,.5);
   background-color: #64A0B4;
 }
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    text-align: left;
+  }
+}
 
 /* No bullet points on list items */
 .sidebar ul {
@@ -73,18 +83,7 @@ html {
     padding: 2;
   }
   .sidebar li {
-    display: inline;
-  }
-}
-
-@media (min-width: 48em) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 18rem;
-    text-align: left;
+    float: left;
   }
 }
 
