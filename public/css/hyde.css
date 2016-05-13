@@ -62,6 +62,14 @@ html {
   }
 }
 
+/* No bullet points on list items */
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -71,20 +79,20 @@ html {
     width: 18rem;
     text-align: left;
     }
-    /* Horizontal links on mobile, vertical otherwise */    
+}
+
+
+
+  /* Horizontal links on mobile, vertical otherwise */    
+@media (max-width: 48em) {
+  .sidebar ul {
+    padding: 2;
+  }
   .sidebar li {
     float: left;
   }
 }
 
-/* No bullet points on list items */
-.sidebar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-  
 /* Sidebar links */
 .sidebar a {
   color: #fff;
