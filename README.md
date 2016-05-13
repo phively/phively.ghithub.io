@@ -35,18 +35,18 @@ v0.5
 ## To-do
 
 v0.6
+- [ ] Comments
+
+v0.7
 - [ ] Project pages
 - [ ] Landing page
 
-v0.7
+v0.8
 - [ ] Posts layout revamp
 - [ ] Improve posts navigation
 
-v0.8
-- [ ] Analytics
-
 v0.9
-- [ ] Comments
+- [ ] Analytics
 
 v1.0
 * Others?
