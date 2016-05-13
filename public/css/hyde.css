@@ -57,7 +57,11 @@ html {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #64A0B4;
+  li {
+    display: inline;
+  }
 }
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -66,12 +70,19 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
-  }
+  } 
 }
 
 /* Sidebar links */
 .sidebar a {
   color: #fff;
+}
+
+/* Horizontal links on mobile, vertical otherwise */
+@media (max-width: 48em) {
+  .sidebar li{
+    float: left;
+  }
 }
 
 /* About section */
