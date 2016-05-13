@@ -92,7 +92,7 @@ html {
 
 /* Horizontal links on mobile, vertical otherwise */
 @media (max-width: 48em) {
-  .sidebar-nav li{
+  .sidebar-nav-item li{
     float: left;
   }
 }
