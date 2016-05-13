@@ -70,7 +70,18 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
-  } 
+  }
+/* Horizontal links on mobile, vertical otherwise */    
+  .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  .sidebar li {
+    float: left;
+  }
 }
 
 /* Sidebar links */
@@ -88,13 +99,6 @@ html {
 /* Sidebar nav */
 .sidebar-nav {
   margin-top: 1rem;
-}
-
-/* Horizontal links on mobile, vertical otherwise */
-@media (max-width: 48em) {
-  .sidebar-nav-item li {
-    display: inline;
-  }
 }
 
 .sidebar-nav-item {
