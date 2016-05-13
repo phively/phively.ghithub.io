@@ -57,9 +57,6 @@ html {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #64A0B4;
-  li {
-    display: inline;
-  }
 }
 
 /* No bullet points on list items */
@@ -70,15 +67,15 @@ html {
   overflow: hidden;
 }
 
-/* Horizontal links on mobile, vertical otherwise    
+/* Horizontal links on mobile, vertical otherwise */
 @media (min-width: 0em) {
   .sidebar ul {
     padding: 2;
   }
   .sidebar li {
-    float: none;
+    display: inline;
   }
-} */
+}
 
 @media (min-width: 48em) {
   .sidebar {
@@ -88,12 +85,6 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
-  }
-  .sidebar ul {
-    padding: 0;
-  }
-  .sidebar li {
-    float: none;
   }
 }
 
