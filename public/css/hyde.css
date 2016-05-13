@@ -71,14 +71,12 @@ html {
 }
 
 /* Horizontal links on mobile, vertical otherwise */    
-@media (max-width: 48em) {
   .sidebar ul {
     padding: 2;
   }
   .sidebar li {
     float: left;
   }
-}
 
 @media (min-width: 48em) {
   .sidebar {
@@ -88,6 +86,9 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
+  }
+  .sidebar ul {
+    padding: 0;
   }
   .sidebar li {
     float: none;
