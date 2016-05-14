@@ -79,10 +79,10 @@ html {
 
 /* Horizontal links on mobile, vertical otherwise */
 @media (max-width: 48em) {
-  .sidebar-nav-item ul {
+  .sidebar-nav ul {
     padding: 2;
   }
-  .sidebar-nav-item li {
+  .sidebar-nav li {
     float: left;
   }
 }
