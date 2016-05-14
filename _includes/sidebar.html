@@ -10,7 +10,6 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of navpages with
@@ -28,9 +27,7 @@
         {% endif %}
       {% endfor %}
       </ul>
-
-      <hr size="1">
-
+    <hr>
       <ul>
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
@@ -42,9 +39,7 @@
         {% endif %}
       {% endfor %}
       </ul>
-
-      <hr size="1">
-
+    <hr>
     <p><div style="text-align:center">{% include svg-icons.html %}</div></p>
     </nav>
 

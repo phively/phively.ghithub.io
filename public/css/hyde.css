@@ -80,11 +80,11 @@ html {
 /* Horizontal links on mobile and reduced padding, vertical otherwise */
 @media (max-width: 48em) {
   .sidebar {
-    padding: .5rem 1rem;
+    padding: 0rem 1rem;
   }
   .sidebar-nav li {
     float: left;
-    padding: 0rem 1rem;
+    padding: 0rem 0rem;
   }
 }
 
