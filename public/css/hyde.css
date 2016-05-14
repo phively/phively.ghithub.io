@@ -80,7 +80,8 @@ html {
 /* Horizontal links on mobile, vertical otherwise */
 @media (max-width: 48em) {
   .sidebar-nav ul {
-    padding: 2;
+    padding: 2rem 1rem;
+    margin: 1rem;
   }
   .sidebar-nav li {
     float: left;
