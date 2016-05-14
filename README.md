@@ -28,7 +28,7 @@ v0.1
 ## Pending
 
 v0.5
-- [ ] Mobile-friendly navigation
+- [x] Mobile-friendly navigation
 - [ ] Posts descriptions
 - [ ] CSS updates
 
