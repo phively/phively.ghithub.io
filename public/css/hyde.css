@@ -87,7 +87,7 @@ html {
   }
   .sidebar hr {
     size: 1;
-    margin: 0.1rem 0.1rem;
+    margin: 0.25rem 0.25rem 0 0;
   }
   /* Horizontal links on mobile and reduced padding */
   .sidebar-nav li {
