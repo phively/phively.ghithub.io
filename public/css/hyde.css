@@ -79,7 +79,8 @@ html {
 /* Horizontal rule formatting */
 .sidebar hr {
   size: 1;
-  margin: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 /* Greatly cut down height of nav bar on small screens */
