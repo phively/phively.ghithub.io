@@ -77,14 +77,22 @@ html {
   overflow: hidden;
 }
 
-/* Horizontal links on mobile and reduced padding, vertical otherwise */
+/* Greatly cut down height of nav bar on small screens */
 @media (max-width: 48em) {
   .sidebar {
-    padding: 0rem 1rem;
+    padding: 0rem 0rem;
   }
+  .sidebar p {
+    height: 0.5rem;
+  }
+  .sidebar hr {
+    height: 0.2rem;
+    padding: 0rem 0rem;
+  }
+  /* Horizontal links on mobile and reduced padding */
   .sidebar-nav li {
     float: left;
-    padding: 0rem 0rem;
+    padding: 0rem 1rem;
   }
 }
 
