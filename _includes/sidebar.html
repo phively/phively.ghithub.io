@@ -17,7 +17,7 @@
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
-          {% if node.layout == "navpage" %}
+          {% if node.layout == "navpage-top" %}
             <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}##">{{ node.title }}</a></li>
 		<!-- {{ node.url }} -->
           {% endif %}
@@ -29,7 +29,7 @@
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
-          {% if node.layout == "page" %}
+          {% if node.layout == "navpage-bottom" %}
             <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}##">{{ node.title }}</a></li>
 		<!-- {{ node.url }} -->
           {% endif %}

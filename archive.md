@@ -1,5 +1,5 @@
 ---
-layout: navpage
+layout: navpage-top
 title: Archive
 ---
 

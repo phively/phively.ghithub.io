@@ -1,5 +1,5 @@
 ---
-layout: navpage
+layout: navpage-top
 title: Tags
 description: "An archive of posts sorted by tag"
 ---
