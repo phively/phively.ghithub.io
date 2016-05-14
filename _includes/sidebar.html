@@ -8,14 +8,11 @@
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
-
     <nav class="sidebar-nav">
-
       {% comment %}
         The code below dynamically generates a sidebar nav of navpages with
         `layout: navpage` in the front-matter. See readme for usage.
       {% endcomment %}
-
       <ul>
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
@@ -42,7 +39,6 @@
     <hr>
     <p><div style="text-align:center">{% include svg-icons.html %}</div></p>
     </nav>
-
     <p>v{{ site.version }} &copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>
