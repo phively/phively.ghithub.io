@@ -28,7 +28,8 @@ v0.1
 ## Pending
 
 v0.5
-- [x] Mobile-friendly navigation
+- [ ] Switch to Lanyon theme
+- [ ] Mobile-friendly navigation
 - [ ] Posts descriptions
 - [ ] CSS updates
 
